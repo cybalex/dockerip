@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# = 0 ]; then
+    echo continer name as argument is required to run this script. extra arguments will be ommited
+    exit 1
+fi
+
+if [ $# = 1 ]; then
+    docker inspect $(sudo docker ps | grep $1 | head -c 12) | grep -e \"IPAddress\"\:[[:space:]]\"[0-2] | \
+    grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
+    exit 0
+fi
