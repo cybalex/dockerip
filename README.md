@@ -2,9 +2,9 @@
 Get docker container IP by container name
 
 # Instllation:
-* clone repo
-* cd ./dockerip
-* sudo mv dockerip /usr/local/dockerip
+* git clone git@github.com:cybalex/dockerip.git
+* cd dockerip
+* sudo mcp dockerip /usr/local/dockerip
 * sudo chmod +x /usr/local/dockerip
 
 # Usage:
